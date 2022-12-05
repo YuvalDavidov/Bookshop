@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Books Shop</title>
+</head>
+
+<body onload="onInit()">
+
+    <h1>Books Shop</h1>
+
+    <button onclick="onAddBook()">Create new book</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="books-container">
+
+        </tbody>
+
+    </table>
+    <label class="page-generator"></label>
+    <button onclick="onNextPage(this)">&#60;</button>
+    <span class="page-num">0</span>
+    <button onclick="onNextPage(this)">&#62;</button>
+
+    <section class="books-filter">
+        <h2>Filter</h2>
+        <label>
+            Min Price: <span></span>
+            <input type="range" min="0" max="150" value="50" class="filter-price-range"
+                onchange="this.value;onSetFilterBy(this.value)">
+        </label>
+        <hr />
+        <div>
+            Sort by:
+            <select name="sort-by" onchange="onSetSortBy(this.value)">
+                <option value="">Select Sorting</option>
+                <option value="title">By Title</option>
+                <option value="price">By Price</option>
+            </select>
+        </div>
+
+    </section>
+
+    <div class="modal">
+        <h3></h3>
+
+        <h5>Book's Brif</h5>
+        <p></p>
+        <div class="book-id"></div>
+        <div class="rate">rate:
+            <button onclick="onUpdateRate(this)">-</button><span></span>
+            <button onclick="onUpdateRate(this)">+</button>
+        </div>
+        <button onclick="onCloseModal()">Close</button>
+    </div>
+
+
+    <script src="js/controller.js"></script>
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/sorage.servic.js"></script>
+    <script src="js/services/book.service.js"></script>
+</body>
+
+</html>

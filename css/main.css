@@ -1,0 +1,84 @@
+body {
+    background-color: lightcoral;
+    overflow-x: hidden;
+}
+
+td {
+    border-radius: 6px;
+    background-color: lightblue;
+    border: 0.1px black solid;
+
+}
+
+table {
+    border-radius: 6px;
+    background-color: rgb(98, 223, 167);
+}
+
+table button {
+    border: 0;
+}
+
+table .read {
+    border-radius: 6px;
+    background-color: rgb(34, 118, 252);
+
+}
+
+table .update {
+    background-color: rgb(255, 183, 0);
+    border-radius: 6px;
+
+
+}
+
+table .delete {
+    border-radius: 6px;
+    background-color: rgb(255, 47, 47);
+
+}
+
+.modal {
+    background-color: rgb(34, 239, 254);
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    height: 80vh;
+    min-width: 300px;
+    text-align: center;
+}
+
+.modal.open {
+    left: 50%;
+    transition: left .5s;
+}
+
+.modal h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 25, 63);
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+
+.modal h5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(6, 7, 7);
+}
+
+.modal>p {
+
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.books-filter {
+    background-color: rgba(148, 148, 148, 0.888);
+
+}
+
+
+.modal div {
+    color: rgb(255, 164, 28);
+}
